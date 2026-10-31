@@ -17,7 +17,7 @@ const StatCard = ({ label, value, icon, color }: any) => (
 
 const AdminDashboard = () => {
   const { data, isLoading } = useGetAdminStatsQuery({});
-  const { data: pendingData, isLoading: pendingLoading, refetch } = useGetPendingUsersQuery({});
+  const { data: pendingData, refetch } = useGetPendingUsersQuery({});
   const [approveUser] = useApproveUserMutation();
   const [rejectUser] = useRejectUserMutation();
 
